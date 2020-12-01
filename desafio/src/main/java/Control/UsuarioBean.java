@@ -45,6 +45,13 @@ public class UsuarioBean {
 		return  "/faces/index.xhtml";
 	}
 	
+	public String novo() {
+		UsuarioDAO userDao = new UsuarioDAO();
+		Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		sessionMap.put("usuario", userDao);
+		return "/faces/novo.xhtml";
+	}
+	
 	
 	// editar usuario
 	public String editUser(int id) {
