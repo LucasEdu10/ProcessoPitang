@@ -14,7 +14,7 @@ import interfaces.Operations;
 public class UsuarioDAO implements Operations<Usuario>{
 	
 	//Realiza conexão com o MySQL
-	EntityManagerFactory emf;
+//	EntityManagerFactory emf;
 	
 	//Realizar as operações de CRUD
 	EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
@@ -53,7 +53,7 @@ public class UsuarioDAO implements Operations<Usuario>{
 	@Override
 	public List<Usuario> obeterUsuarios() {
 		List<Usuario> listUser = new ArrayList<>();
-		Query q = em.createQuery("SELECT user FROM usuario user");
+		Query q = em.createQuery("SELECT user FROM Usuario user");
 		listUser = q.getResultList();
 		return listUser;
 	}

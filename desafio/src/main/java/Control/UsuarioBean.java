@@ -16,26 +16,26 @@ import Model.Usuario;
 public class UsuarioBean {
 	
 	public List<Usuario> obeterUsuarios(){
-//		UsuarioDAO users = new UsuarioDAO();
-		List<Usuario> listUsers = new ArrayList<>();
-		Usuario user1 = new Usuario();
-		user1.setId(1);
-		user1.setNome("Lucas");
-		user1.setEmail("Lucas@gmail.com");
-		user1.setSenha("123");
-		user1.setTelefone("XXXXXXX");
-		Usuario user2 = new Usuario();
-		user2.setId(2);
-		user2.setNome("Rayana");
-		user2.setEmail("Rayana@gmail.com");
-		user2.setSenha("123");
-		user2.setTelefone("XXXXXXX");
+		UsuarioDAO users = new UsuarioDAO();
+//		List<Usuario> listUsers = new ArrayList<>();
+//		Usuario user1 = new Usuario();
+//		user1.setId(1);
+//		user1.setNome("Lucas");
+//		user1.setEmail("Lucas@gmail.com");
+//		user1.setSenha("123");
+//		user1.setTelefone("XXXXXXX");
+//		Usuario user2 = new Usuario();
+//		user2.setId(2);
+//		user2.setNome("Rayana");
+//		user2.setEmail("Rayana@gmail.com");
+//		user2.setSenha("123");
+//		user2.setTelefone("XXXXXXX");
+//		
+//		listUsers.add(user1);
+//		listUsers.add(user2);
 		
-		listUsers.add(user1);
-		listUsers.add(user2);
-		
-//		return users.obeterUsuarios();
-		return listUsers;
+		return users.obeterUsuarios();
+//		return listUsers;
 	}
 	
 	public String saveUser (Usuario user) {
